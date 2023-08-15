@@ -1,0 +1,2 @@
+SELECT user_type,user_type_id FROM users.user_type_master
+where user_type_id <> 0;

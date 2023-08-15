@@ -1,0 +1,26 @@
+with sub_detail as
+	(select user_id,
+			product_id,
+			max(active_till) as active_till
+		from management.subscription_detail
+		group by user_id,
+			product_id),
+	user_detail as
+	(select ud.user_id,
+			concat(first_name,' ',last_name) as name,
+			email,
+			phone_number
+		from users.user_details as ud
+		join users.user_type_master as utm on utm.user_type_id = ud.user_type
+		where ud.user_type <> 0
+			and ud.user_type = {{user_type_select.selectedOptionValue}}
+		order by user_id asc)
+select user_detail.user_id,
+name,
+email,phone_number,active_till,
+CASE
+when CURRENT_DATE < active_till  then 'Active' else 'Deactived'
+end 
+status
+from user_detail
+left outer join sub_detail on sub_detail.user_id = user_detail.user_id
