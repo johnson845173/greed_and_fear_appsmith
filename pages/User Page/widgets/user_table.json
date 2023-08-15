@@ -61,7 +61,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1692083672083,
+    "columnUpdatedAt": 1692084086987,
     "primaryColumnId": "user_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 45,
@@ -113,7 +113,7 @@
             "allowCellWrapping": false,
             "index": 0,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "user_id",
             "columnType": "number",
             "horizontalAlignment": "LEFT",
