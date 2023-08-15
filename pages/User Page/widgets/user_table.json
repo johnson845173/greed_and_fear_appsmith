@@ -18,9 +18,10 @@
         {"key": "primaryColumns.phone_number.computedValue"},
         {"key": "primaryColumns.active_till.computedValue"},
         {"key": "primaryColumns.status.computedValue"},
-        {"key": "primaryColumns.status.cellBackground"},
         {"key": "primaryColumns.product_name.computedValue"},
-        {"key": "tableData"}
+        {"key": "tableData"},
+        {"key": "primaryColumns.purchased_at.computedValue"},
+        {"key": "primaryColumns.status.cellBackground"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -61,7 +62,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1692084086987,
+    "columnUpdatedAt": 1692106458154,
     "primaryColumnId": "user_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 45,
@@ -74,7 +75,8 @@
         "phone_number",
         "active_till",
         "product_name",
-        "status"
+        "status",
+        "purchased_at"
     ],
     "dynamicPropertyPathList": [
         {"key": "tableData"},
@@ -97,6 +99,36 @@
     "dynamicTriggerPathList": [{"key": "onRowSelected"}],
     "borderWidth": "1",
     "primaryColumns": {
+        "purchased_at": {
+            "computedValue": "{{user_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"purchased_at\"]))}}",
+            "isEditable": false,
+            "alias": "purchased_at",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "purchased_at",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": false,
+            "textSize": "0.875rem",
+            "allowCellWrapping": false,
+            "index": 7,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "purchased_at",
+            "fontStyle": "",
+            "textColor": "",
+            "columnType": "date",
+            "horizontalAlignment": "LEFT",
+            "isCellEditable": false,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "purchased_at",
+            "cellBackground": "",
+            "verticalAlignment": "CENTER"
+        },
         "user_id": {
             "computedValue": "{{user_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"user_id\"]))}}",
             "isEditable": false,
@@ -294,7 +326,7 @@
             "enableFilter": true,
             "sticky": "",
             "originalId": "status",
-            "cellBackground": "{{user_table.processedTableData.map((currentRow, currentIndex) => (  currentRow.status === 'Active' ? 'lightgreen' : currentRow.status === 'About to end' ? 'Yellow' : 'Red'))}}",
+            "cellBackground": "{{user_table.processedTableData.map((currentRow, currentIndex) => ( currentRow.status === 'Active' ? 'LightGreen' : currentRow.status === 'Deactived' ? '#f44336' : 'Yellow'))}}",
             "verticalAlignment": "CENTER"
         }
     },

@@ -34,7 +34,7 @@
     "key": "nzr9yhmk7j",
     "isDeprecated": false,
     "rightColumn": 62,
-    "backgroundColor": "{{ user_table.selectedRow.status === 'Active' ? 'lightgreen' : user_table.selectedRow.status === 'About to end' ? 'Yellow' : 'Red'}}",
+    "backgroundColor": "{{user_table.selectedRow.status === 'Active' ? 'LightGreen' : user_table.selectedRow.status === 'Deactived' ? '#f44336' : 'Yellow'}}",
     "textAlign": "CENTER",
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "hpesz1qo7v",
