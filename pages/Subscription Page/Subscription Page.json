@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 670,
+          "bottomRow": 570,
           "containerStyle": "none",
           "snapRows": 66,
           "parentRowSpace": 1,
@@ -25,7 +25,19 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Subscription Page_get_subscription_details",
+              "name": "get_subscription_details",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
         "id": "Subscription Page",
         "deleted": false,

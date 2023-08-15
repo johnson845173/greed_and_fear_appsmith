@@ -2,6 +2,7 @@
   "unpublishedPage": {
     "name": "User Page",
     "slug": "user-page",
+    "customSlug": "",
     "layouts": [
       {
         "viewMode": false,
