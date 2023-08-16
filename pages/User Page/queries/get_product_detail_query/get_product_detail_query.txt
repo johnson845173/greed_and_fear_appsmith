@@ -1,1 +1,2 @@
 SELECT * FROM management.product_details
+WHERE IS_active = true order by product_id
