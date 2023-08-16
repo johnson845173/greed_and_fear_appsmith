@@ -21,7 +21,8 @@
         {"key": "primaryColumns.product_name.computedValue"},
         {"key": "tableData"},
         {"key": "primaryColumns.purchased_at.computedValue"},
-        {"key": "primaryColumns.status.cellBackground"}
+        {"key": "primaryColumns.status.cellBackground"},
+        {"key": "primaryColumns.total_days.computedValue"}
     ],
     "needsHeightForContent": true,
     "leftColumn": 0,
@@ -62,7 +63,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1692106458154,
+    "columnUpdatedAt": 1692202771813,
     "primaryColumnId": "user_id",
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 45,
@@ -76,7 +77,8 @@
         "active_till",
         "product_name",
         "status",
-        "purchased_at"
+        "purchased_at",
+        "total_days"
     ],
     "dynamicPropertyPathList": [
         {"key": "tableData"},
@@ -327,6 +329,36 @@
             "sticky": "",
             "originalId": "status",
             "cellBackground": "{{user_table.processedTableData.map((currentRow, currentIndex) => ( currentRow.status === 'Active' ? 'LightGreen' : currentRow.status === 'Deactived' ? '#f44336' : 'Yellow'))}}",
+            "verticalAlignment": "CENTER"
+        },
+        "total_days": {
+            "computedValue": "{{user_table.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"total_days\"]))}}",
+            "isEditable": false,
+            "alias": "total_days",
+            "enableSort": true,
+            "isSaveVisible": true,
+            "id": "total_days",
+            "isDisabled": false,
+            "allowSameOptionsInNewRow": true,
+            "validation": {},
+            "isCellVisible": true,
+            "isDerived": false,
+            "textSize": "0.875rem",
+            "allowCellWrapping": false,
+            "index": 8,
+            "isDiscardVisible": true,
+            "isVisible": true,
+            "label": "Total Days",
+            "fontStyle": "",
+            "textColor": "",
+            "columnType": "number",
+            "horizontalAlignment": "LEFT",
+            "isCellEditable": false,
+            "width": 150,
+            "enableFilter": true,
+            "sticky": "",
+            "originalId": "total_days",
+            "cellBackground": "",
             "verticalAlignment": "CENTER"
         }
     },

@@ -26,9 +26,10 @@ when CURRENT_DATE >= purchased_at and CURRENT_DATE < active_till  then 'Active'
 when CURRENT_DATE = active_till  then 'About to end'
 else 'Deactived'
 end status,
-purchased_at
-
+purchased_at,
+total_days 
 from user_detail
+join management.total_days_view as tdv on tdv.user_id = user_detail.user_id
 left outer join sub_detail on sub_detail.user_id = user_detail.user_id
 left outer join management.product_details as pd on pd.product_id = sub_detail.product_id
 order by status asc,name

@@ -7,6 +7,10 @@
     {
       "id": "Subscription Page",
       "isDefault": false
+    },
+    {
+      "id": "Account info Page",
+      "isDefault": false
     }
   ],
   "viewMode": false,
