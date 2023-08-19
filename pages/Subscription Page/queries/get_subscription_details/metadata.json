@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select \nconcat(first_name,' ',last_name) as name,\nproduct_name,\npurchased_at,\nphone_number,email,\nupi_transaction_id,\ntransaction_id,\ncost\nfrom management.subscription_detail as sd\njoin users.user_details as ud on ud.user_id = sd.user_id\njoin management.product_details as pd on pd.product_id = sd.product_id\norder by id desc",
+      "body": "select \nname,\nproduct_name,\npurchased_at,\nphone_number,email,\nupi_transaction_id,\ntransaction_id,\ncost\nfrom management.subscription_detail as sd\njoin users.user_details as ud on ud.user_id = sd.user_id\njoin management.product_details as pd on pd.product_id = sd.product_id\norder by id desc",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
