@@ -9,4 +9,5 @@ cost
 from management.subscription_detail as sd
 join users.user_details as ud on ud.user_id = sd.user_id
 join management.product_details as pd on pd.product_id = sd.product_id
+where ud.user_type = 3
 order by id desc
