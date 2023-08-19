@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "INSERT INTO users.user_details(\n\tfirst_name, last_name, email, user_type, phone_number)\n\tVALUES ({{user_first_name.text}}, {{user_last_name.text}}, {{user_email.text}}, {{user_type_drop.selectedOptionValue}}, {{user_phone.dialCode+user_phone.value}});",
+      "body": "INSERT INTO users.user_details(\n\tname, email, user_type, phone_number)\n\tVALUES ({{user_first_name.text}}, {{user_email.text}}, {{user_type_drop.selectedOptionValue}}, {{user_phone.dialCode+user_phone.value}});",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -38,7 +38,6 @@
     "jsonPathKeys": [
       "user_email.text",
       "user_first_name.text",
-      "user_last_name.text",
       "user_phone.dialCode+user_phone.value",
       "user_type_drop.selectedOptionValue"
     ],

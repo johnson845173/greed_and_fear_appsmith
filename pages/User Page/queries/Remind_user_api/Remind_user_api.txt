@@ -1,0 +1,4 @@
+
+{
+	"user_id":{{user_table.selectedRow.user_id}}
+}
