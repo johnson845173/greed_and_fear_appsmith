@@ -11,6 +11,10 @@
     {
       "id": "Account info Page",
       "isDefault": false
+    },
+    {
+      "id": "user_phone_project_greed",
+      "isDefault": false
     }
   ],
   "viewMode": false,

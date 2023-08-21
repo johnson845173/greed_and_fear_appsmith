@@ -31,6 +31,7 @@
     "mobileBottomRow": 15,
     "widgetName": "user_type_select",
     "isFilterable": true,
+    "dynamicPropertyPathList": [{"key": "sourceData"}],
     "displayName": "Select",
     "searchTags": ["dropdown"],
     "bottomRow": 13,

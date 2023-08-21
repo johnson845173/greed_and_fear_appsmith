@@ -1,0 +1,3 @@
+select * from (select distinct name,phone_no as phone
+from project_greed.user_feed
+where phone_no is not null) as data
