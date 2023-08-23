@@ -32,4 +32,5 @@ from user_detail
 left outer join management.total_days_view as tdv on tdv.user_id = user_detail.user_id
 left outer join sub_detail on sub_detail.user_id = user_detail.user_id
 left outer join management.product_details as pd on pd.product_id = sub_detail.product_id
+where product_type <> 2 or product_type is null
 order by status asc,name

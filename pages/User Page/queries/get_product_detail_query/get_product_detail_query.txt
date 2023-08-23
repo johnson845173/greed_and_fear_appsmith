@@ -1,2 +1,3 @@
 SELECT * FROM management.product_details
-WHERE IS_active = true order by product_id
+WHERE IS_active = true  and payment_mode = {{direct_or_cosmo_button.selectedOptionValue}}
+order by product_id

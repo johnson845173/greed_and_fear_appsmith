@@ -14,7 +14,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 690,
+          "bottomRow": 710,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -29,14 +29,6 @@
         },
         "layoutOnLoadActions": [
           [
-            {
-              "id": "User Page_get_product_detail_query",
-              "name": "get_product_detail_query",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "User Page_get_user_roles_query",
               "name": "get_user_roles_query",
@@ -54,6 +46,18 @@
               "pluginType": "DB",
               "jsonPathKeys": [
                 "user_type_select.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "User Page_get_product_detail_query",
+              "name": "get_product_detail_query",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "direct_or_cosmo_button.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }

@@ -19,7 +19,7 @@
     "needsHeightForContent": true,
     "leftColumn": 13,
     "delimiter": ",",
-    "defaultSelectedRowIndex": 0,
+    "defaultSelectedRowIndex": "0",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "isVisibleFilters": false,
     "isVisible": true,
