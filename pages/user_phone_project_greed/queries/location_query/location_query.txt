@@ -1,0 +1,12 @@
+select distinct(city),count(*)
+from project_greed.user_data ud
+join project_greed.dmat_data dd on dd.email = ud.email -- group by name
+
+where is_superuser = '0'
+	and is_staff = '0'
+	and is_active = '1'
+	and name is not null
+	and last_login is not null
+group by city
+order by count desc 
+-- order by last_login desc

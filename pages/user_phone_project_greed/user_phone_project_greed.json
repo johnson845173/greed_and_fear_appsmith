@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 900,
+          "bottomRow": 1510,
           "containerStyle": "none",
           "snapRows": 71,
           "parentRowSpace": 1,
@@ -30,6 +30,14 @@
             {
               "id": "user_phone_project_greed_Query1",
               "name": "Query1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "user_phone_project_greed_location_query",
+              "name": "location_query",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
