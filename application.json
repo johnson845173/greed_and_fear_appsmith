@@ -15,6 +15,10 @@
     {
       "id": "user_phone_project_greed",
       "isDefault": false
+    },
+    {
+      "id": "Open Interest ",
+      "isDefault": false
     }
   ],
   "viewMode": false,

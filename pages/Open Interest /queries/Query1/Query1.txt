@@ -1,0 +1,4 @@
+select symbol,round(((open_interest/mwpl)*100)::numeric,2) as percentage
+from trade.sebi_oi_master
+where date = {{DatePicker1.formattedDate}}
+order by percentage desc

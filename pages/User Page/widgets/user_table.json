@@ -86,7 +86,7 @@
         {"key": "primaryColumns.status.cellBackground"}
     ],
     "displayName": "Table",
-    "bottomRow": 67,
+    "bottomRow": 79,
     "columnWidthMap": {
         "user_id": 101,
         "name": 139,
