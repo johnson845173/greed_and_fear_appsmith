@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 690,
+          "bottomRow": 1580,
           "containerStyle": "none",
           "snapRows": 119,
           "parentRowSpace": 1,
@@ -33,6 +33,19 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Open Interest _ban_query",
+              "name": "ban_query",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "start_date.formattedDate",
+                "compare_date.formattedDate"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

@@ -1,2 +1,28 @@
-SELECT list_of_stock FROM trade.sebi_ban_master
-where date_of_ban ='2023-08-30'
+with today_ban as
+	(select symbol as today_symbol,
+			date_of_ban as today_date_of_ban
+		from trade.sebi_ban_master
+		where date_of_ban = {{start_date.formattedDate}}),
+	yesterday_ban as
+	(select symbol,
+			date_of_ban
+		from trade.sebi_ban_master
+		where date_of_ban = {{compare_date.formattedDate}}),
+	ban_data as
+	(select *
+		from today_ban tb
+		full outer join yesterday_ban yb on tb.today_symbol = yb.symbol)
+		
+select 
+case
+when today_date_of_ban is null then symbol::text
+when date_of_ban is null then today_symbol::text
+when date_of_ban is not null and today_date_of_ban is not null then today_symbol::text
+end Stock
+,
+case
+when today_date_of_ban is null then 'Unbanned'::text
+when date_of_ban is null then 'New Ban'::text
+when date_of_ban is not null and today_date_of_ban is not null then 'Ban Continue'::text
+end ban_status
+from ban_data

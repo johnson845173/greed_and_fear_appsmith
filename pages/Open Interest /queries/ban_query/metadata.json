@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "SELECT list_of_stock FROM trade.sebi_ban_master\nwhere date_of_ban ='2023-08-30'",
+      "body": "with today_ban as\n\t(select symbol as today_symbol,\n\t\t\tdate_of_ban as today_date_of_ban\n\t\tfrom trade.sebi_ban_master\n\t\twhere date_of_ban = {{start_date.formattedDate}}),\n\tyesterday_ban as\n\t(select symbol,\n\t\t\tdate_of_ban\n\t\tfrom trade.sebi_ban_master\n\t\twhere date_of_ban = {{compare_date.formattedDate}}),\n\tban_data as\n\t(select *\n\t\tfrom today_ban tb\n\t\tfull outer join yesterday_ban yb on tb.today_symbol = yb.symbol)\n\t\t\nselect \ncase\nwhen today_date_of_ban is null then symbol::text\nwhen date_of_ban is null then today_symbol::text\nwhen date_of_ban is not null and today_date_of_ban is not null then today_symbol::text\nend Stock\n,\ncase\nwhen today_date_of_ban is null then 'Unbanned'::text\nwhen date_of_ban is null then 'New Ban'::text\nwhen date_of_ban is not null and today_date_of_ban is not null then 'Ban Continue'::text\nend ban_status\nfrom ban_data",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -26,12 +26,19 @@
         }
       ]
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "compare_date.formattedDate",
+      "start_date.formattedDate"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
