@@ -2,7 +2,7 @@
   "pages": [
     {
       "id": "User Page",
-      "isDefault": true
+      "isDefault": false
     },
     {
       "id": "Subscription Page",
@@ -18,7 +18,7 @@
     },
     {
       "id": "Open Interest ",
-      "isDefault": false
+      "isDefault": true
     }
   ],
   "viewMode": false,
