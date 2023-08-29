@@ -61,7 +61,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1693321262897,
+    "columnUpdatedAt": 1693323877817,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 55,
     "widgetName": "Table1",
@@ -69,10 +69,10 @@
     "columnOrder": [
         "symbol",
         "today_percentage",
-        "day_1_change",
-        "day_2_change",
         "day_1",
-        "day_2"
+        "day_2",
+        "day_1_change",
+        "day_2_change"
     ],
     "dynamicPropertyPathList": [
         {"key": "primaryColumns.day_1_change.cellBackground"},
@@ -105,7 +105,7 @@
             "index": 5,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "day_2",
+            "label": "Day 2 MWPL",
             "fontStyle": "",
             "textColor": "",
             "columnType": "number",
@@ -135,7 +135,7 @@
             "index": 0,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "symbol",
+            "label": "Stock",
             "columnType": "text",
             "horizontalAlignment": "LEFT",
             "isCellEditable": false,
@@ -162,7 +162,7 @@
             "index": 4,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "day_1",
+            "label": "Day 1 MWPL",
             "fontStyle": "",
             "textColor": "",
             "columnType": "number",
@@ -252,7 +252,7 @@
             "index": 1,
             "isDiscardVisible": true,
             "isVisible": true,
-            "label": "today_percentage",
+            "label": "Day 0 MWPL",
             "fontStyle": "",
             "textColor": "",
             "columnType": "number",
