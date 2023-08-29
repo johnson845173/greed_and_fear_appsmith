@@ -232,7 +232,7 @@
             "enableFilter": true,
             "sticky": "",
             "originalId": "day_2_change",
-            "cellBackground": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow.day_1_change < 0 ? '#FF2900' : 'lightgreen'))}}",
+            "cellBackground": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow.day_2_change < 0 ? '#FF2900' : 'lightgreen'))}}",
             "verticalAlignment": "CENTER"
         },
         "today_percentage": {

@@ -1,0 +1,2 @@
+SELECT list_of_stock FROM trade.sebi_ban_master
+where date_of_ban ='2023-08-30'
