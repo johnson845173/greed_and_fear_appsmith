@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 890,
+          "bottomRow": 690,
           "containerStyle": "none",
           "snapRows": 119,
           "parentRowSpace": 1,
@@ -32,9 +32,7 @@
               "name": "Query1",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
-              "jsonPathKeys": [
-                "DatePicker1.formattedDate"
-              ],
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]

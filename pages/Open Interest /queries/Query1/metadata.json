@@ -18,7 +18,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "select symbol,round(((open_interest/mwpl)*100)::numeric,2) as percentage\nfrom trade.sebi_oi_master\nwhere date = {{DatePicker1.formattedDate}}\norder by percentage desc",
+      "body": "SELECT * FROM trade.oi_change_percentage_view",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -27,17 +27,11 @@
       ]
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "DatePicker1.formattedDate"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
