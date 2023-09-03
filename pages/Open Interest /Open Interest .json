@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1580,
+          "bottomRow": 1950,
           "containerStyle": "none",
           "snapRows": 119,
           "parentRowSpace": 1,
@@ -30,6 +30,14 @@
             {
               "id": "Open Interest _Query1",
               "name": "Query1",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Open Interest _Query2",
+              "name": "Query2",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [],
