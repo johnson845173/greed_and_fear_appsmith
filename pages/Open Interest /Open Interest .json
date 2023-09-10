@@ -42,9 +42,7 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
               "id": "Open Interest _ban_query",
               "name": "ban_query",
