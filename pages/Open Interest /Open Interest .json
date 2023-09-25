@@ -13,13 +13,13 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1950,
+          "bottomRow": 2090,
           "containerStyle": "none",
           "snapRows": 119,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 85,
+          "version": 86,
           "minHeight": 1210,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -42,7 +42,9 @@
               "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
               "id": "Open Interest _ban_query",
               "name": "ban_query",
