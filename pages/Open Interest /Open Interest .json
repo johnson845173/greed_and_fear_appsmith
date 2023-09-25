@@ -51,8 +51,8 @@
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
-                "start_date.formattedDate",
-                "compare_date.formattedDate"
+                "compare_date.formattedDate",
+                "start_date.formattedDate"
               ],
               "timeoutInMillisecond": 10000
             }
