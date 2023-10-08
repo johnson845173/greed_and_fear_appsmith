@@ -88,10 +88,11 @@
     "displayName": "Table",
     "bottomRow": 79,
     "columnWidthMap": {
-        "user_id": 101,
+        "user_id": 60,
         "name": 139,
         "active_till": 206,
         "phone_number": 176,
+        "product_name": 204,
         "email": 147
     },
     "parentRowSpace": 10,
